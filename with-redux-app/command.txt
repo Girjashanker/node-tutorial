@@ -1,0 +1,22 @@
+npx create-next-app --example with-redux --branch canary with-redux-app
+
+backendApiCall
+    fetchAllTodos
+wrap with createAppAsyncThunk
+    loadAllTodo
+addd extraReducer in slice
+    loadAllTodo.pending
+    loadAllTodo.fullfilled
+dispatch(thunkFunction());
+dispatch(loadAllTodo());
+=============================
+UI Action
+      dispatch(addToDo(todo));
+
+        addToDo->
+            createAppAsyncThunk
+                addTodoApi
+                    http://localhost:3000/api/todos
+                        api/route.ts->POST
+        extraReducer
+            addTodoApi.fullfilled
